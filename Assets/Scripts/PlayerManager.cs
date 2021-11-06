@@ -27,9 +27,8 @@ public class PlayerManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        LoadHighScore();
-
-        bestScoreText.text = "HighScore : " + highScorePlayerName + " (" + highScore + ")";
+        // LoadHighScore();
+        // bestScoreText.text = "HighScore : " + highScorePlayerName + " (" + highScore + ")";
     }
 
     // "/Users/berrakmuradoglu/Documents/GitHub/Data-Persistance-Project/GamePlayerData.json"

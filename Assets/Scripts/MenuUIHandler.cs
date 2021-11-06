@@ -12,6 +12,13 @@ using UnityEditor;
 public class MenuUIHandler : MonoBehaviour
 {
     public TextMeshProUGUI playerNameText;
+    public TextMeshProUGUI bestScoreText;
+
+    private void Start()
+    {
+        PlayerManager.Instance.LoadHighScore();
+        bestScoreText.text = "HighScore : " + PlayerManager.Instance.highScorePlayerName + " (" + PlayerManager.Instance.highScore + ")";
+    }
 
     public void StartNew()
     {
