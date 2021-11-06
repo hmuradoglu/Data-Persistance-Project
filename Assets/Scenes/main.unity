@@ -504,6 +504,7 @@ MonoBehaviour:
   ScoreText: {fileID: 188020406}
   GameOverText: {fileID: 474497238}
   BackToMainButton: {fileID: 473856544}
+  bestScoreText: {fileID: 2078529056}
 --- !u!1 &455529321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,7 +1622,7 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Best Score : Name : 0'

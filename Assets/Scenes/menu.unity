@@ -550,7 +550,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: 
   highScore: 0
-  playerNameText: {fileID: 191733637}
+  bestScoreText: {fileID: 1853204644}
+  playerNameText: {fileID: 1651383644}
 --- !u!4 &442311976
 Transform:
   m_ObjectHideFlags: 0
@@ -1116,6 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f641ffc8e7f245228a44587334ba3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNameText: {fileID: 1651383644}
 --- !u!1 &1478048147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,7 +1712,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}

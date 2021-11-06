@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
 
     public string playerName;
+    public string highScorePlayerName;
     public int highScore;
 
-    public GameObject playerNameText;
+    public TextMeshProUGUI bestScoreText;
+    // public TextMeshProUGUI playerNameText;
 
     void Awake()
     {
@@ -22,6 +26,10 @@ public class PlayerManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        LoadHighScore();
+
+        bestScoreText.text = "HighScore : " + highScorePlayerName + "(" + highScore + ")";
 
     }
 
@@ -44,4 +52,19 @@ public class PlayerManager : MonoBehaviour
 
         File.WriteAllText("/Users/berrakmuradoglu/Documents/GitHub/Data-Persistance-Project/GamePlayerData.json", json);
     }
+
+    public void LoadHighScore()
+    {
+        string path = "/Users/berrakmuradoglu/Documents/GitHub/Data-Persistance-Project/GamePlayerData.json";
+
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            SaveData data = JsonUtility.FromJson<SaveData>(json);
+
+            highScorePlayerName = data.playerName;
+            highScore = data.highScore;
+        }
+    }
+
 }
