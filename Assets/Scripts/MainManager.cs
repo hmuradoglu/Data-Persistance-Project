@@ -76,6 +76,15 @@ public class MainManager : MonoBehaviour
     public void GameOver()
     {
         m_GameOver = true;
+
+        if(m_Points > PlayerManager.Instance.highScore)
+        {
+            PlayerManager.Instance.highScore = m_Points;
+            PlayerManager.Instance.highScorePlayerName = PlayerManager.Instance.playerName;
+            PlayerManager.Instance.SaveHighScore();
+            GetBestScore();
+        }
+
         GameOverText.SetActive(true);
         BackToMainButton.SetActive(true);
     }
@@ -88,7 +97,7 @@ public class MainManager : MonoBehaviour
     void GetBestScore()
     {
         PlayerManager.Instance.LoadHighScore();
-        bestScoreText.text = "HighScore : " + PlayerManager.Instance.highScorePlayerName + "(" + PlayerManager.Instance.highScore + ")";
+        bestScoreText.text = "HighScore : " + PlayerManager.Instance.highScorePlayerName + " (" + PlayerManager.Instance.highScore + ")";
 
     }
 }

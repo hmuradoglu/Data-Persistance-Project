@@ -30,4 +30,10 @@ public class MenuUIHandler : MonoBehaviour
 
     }
 
+    public void ResetHighscore()
+    {
+        PlayerManager.Instance.highScorePlayerName = null;
+        PlayerManager.Instance.highScore = 0;
+        PlayerManager.Instance.SaveHighScore();
+    }
 }

@@ -29,8 +29,7 @@ public class PlayerManager : MonoBehaviour
 
         LoadHighScore();
 
-        bestScoreText.text = "HighScore : " + highScorePlayerName + "(" + highScore + ")";
-
+        bestScoreText.text = "HighScore : " + highScorePlayerName + " (" + highScore + ")";
     }
 
     // "/Users/berrakmuradoglu/Documents/GitHub/Data-Persistance-Project/GamePlayerData.json"
